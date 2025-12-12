@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Creative Portfolio — Home</title>
+  <style>
+    :root{
+      --bg:#000;
+      --text:#f5f5f5;
+      --accent:#DC143C;
+      --muted:#bdbdbd;
+      --max-width:1100px;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter','Helvetica Neue',Arial,sans-serif;
+    }
+    .container{max-width:var(--max-width);margin:40px auto;padding:24px;}
+    header{text-align:center;margin-bottom:40px}
+    h1{font-size:36px;margin-bottom:6px}
+    p.subtitle{color:var(--muted);margin-top:0}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+    .card{background:#0a0a0a;border:1px solid rgba(255,255,255,0.05);padding:18px;border-radius:12px;text-decoration:none;color:var(--text);transition:0.2s}
+    .card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .card h3{margin:0 0 8px;font-size:20px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    footer{text-align:center;margin-top:40px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav style="margin-bottom:16px;">
+        <a href="index.html" style="color:var(--accent); text-decoration:none; font-weight:bold;">Home</a>
+      </nav>
+      <h1>Kortni Prouty — Creative Portfolio</h1>
+      <p class="subtitle">A collection of my design, game, and visual projects created by Kortni Prouty</p>
+    </header>
+
+    <section class="about" style="margin-top:32px; background:#0a0a0a; padding:20px; border-radius:12px; border:1px solid rgba(255,255,255,0.05); display:flex; gap:20px; align-items:center;">
+      <img src="images/IMG_2821.jpeg" alt="Kortni Prouty" style="width:180px; height:180px; object-fit:cover; border-radius:12px; border:2px solid var(--accent);">
+      <div>
+        <h2 style="margin:0; color:var(--accent);">About Me</h2>
+        <p style="color:var(--muted); margin-top:6px;">My name is Kortni Prouty. I am a student at Midway University pursuing a Bachelor's degree in Game Studies and Design. I focus on storytelling, visual design, and interactive media—especially games that blend creativity with personality. My goal is to create memorable gameplay experiences while growing as a designer and developer.(Im on the right)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <a class="card" href="that_time_i_got_a_job_portfolio_website.html">
+          <h3>That Time I Got a Job</h3>
+          <p>RPG Maker MZ | 2024<br>A short RPG showcasing UI design, maps, and scene work.</p>
+        </a>
+       <a class="card" href="kitty_rescue.html">
+    <h3>Kitty Rescue</h3>
+    <p>RPG Maker MZ | 2025<br>A lighthearted rescue-themed RPG with custom UI, maps, and cutscenes.</p>
+  </a>
+
+</div>
+    </section>
+
+    <footer>
+      <p>© 2025 My Portfolio</p>
+    </footer>
+  </div>
+</body>
+</html>

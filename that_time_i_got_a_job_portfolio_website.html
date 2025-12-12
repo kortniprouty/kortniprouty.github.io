@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>That Time I Got a Job — Portfolio</title>
+  <style>
+<nav>
+    <a class="cta" href="index.html"
+       style="
+           background: var(--accent);
+           color: white;
+           padding: 10px 14px;
+           border-radius: 8px;
+           text-decoration: none;
+           font-weight: 600;
+           border: none;
+       ">
+       ← Back to Home
+    </a>
+</nav>
+    /* Option D: Black + Crimson + Canva Sans (fallbacks) */
+    @font-face {
+      font-family: 'Canva Sans Local';
+      src: local('Canva Sans'), local('CanvaSans');
+      font-weight: 400 700;
+    }
+    :root{
+      --bg:#000000;
+      --text:#f5f5f5;
+      --accent:#DC143C; /* crimson */
+      --muted:#bdbdbd;
+      --max-width:1100px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: 'Canva Sans Local', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-width);margin:40px auto;padding:24px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:62px;height:62px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b0000);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    h1{font-size:28px;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .meta{background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:14px;border-radius:10px;margin-top:18px}
+    .meta strong{color:var(--accent)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:10px;overflow:hidden}
+    .thumb{width:100%;height:160px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .caption{margin-top:10px;font-size:14px;color:var(--muted)}
+    .caption .title{color:var(--text);font-weight:600}
+
+    /* Featured hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:26px}
+    .hero .intro{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.03)}
+    .hero .preview{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .preview img{width:100%;display:block}
+
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+    a.cta{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+
+    /* Light modal for viewing images */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;padding:24px}
+    .modal.active{display:flex}
+    .modal img{max-width:92%;max-height:92%;border-radius:8px;box-shadow:0 10px 60px rgba(0,0,0,0.7)}
+    .close{position:fixed;right:28px;top:24px;color:var(--text);font-size:20px;background:transparent;border:none}
+
+    /* Responsive tweaks */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .preview{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">KT</div>
+        <div>
+          <h1>That Time I Got a Job</h1>
+          <p class="lead">A short RPG made with RPG Maker MZ — portfolio showcase (2024)</p>
+        </div>
+      </div>
+     <nav>
+        <a class="cta" href="index.html" style="background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:600; border:none;">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="meta">
+      <p><strong>Project:</strong> That Time I Got a Job &nbsp; • &nbsp; <strong>Tools:</strong> RPG Maker MZ &nbsp; • &nbsp; <strong>Year:</strong> 2024</p>
+      <p style="margin-top:8px;color:var(--muted)">This small RPG explores work and humor in short-form gameplay. The screenshots below show UI, exploration, dialogue, and in-game scenes. Designed with a black and crimson brand in mind.</p>
+    </section>
+
+    <section class="hero">
+      <div class="intro">
+        <h2 style="margin-top:0">Design Intent</h2>
+        <p style="color:var(--muted)">The game focuses on clear visual storytelling with readable UI, distinct character portraits, and a consistent color palette. This portfolio page highlights UI decisions, level layout, and art direction.</p>
+
+        <h3 style="margin-bottom:6px">Role & Responsibilities</h3>
+        <ul style="color:var(--muted)">
+          <li>Level/event design using RPG Maker MZ</li>
+          <li>UI layout and menu design</li>
+          <li>Sprite placement and scene composition</li>
+          <li>Playtesting and iteration</li>
+        </ul>
+
+        <h3 style="margin-bottom:6px">Tools</h3>
+        <p style="color:var(--muted);margin-top:6px">RPG Maker MZ — tilemaps, event scripting, character sprites, and menu customization.</p>
+
+        <p style="margin-top:12px"><strong style="color:var(--accent)">Note:</strong> Images below are screenshots from builds and are included to show visual design and interface decisions.</p>
+      </div>
+
+      <div class="preview">
+        <!-- Featured image (replace path with your actual file structure) -->
+        <img src="images/Screenshot (24).png" alt="Featured screenshot">
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="Project screenshots">
+      <!-- Gallery items: list of images from the upload -->
+      <div class="card"><img class="thumb" src="images/Screenshot (10).png" alt="Screenshot 10" loading="lazy"><div class="caption"><div class="title">Name Entry System</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (11).png" alt="Screenshot 11" loading="lazy"><div class="caption"><div class="title">Main Map</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (12).png" alt="Screenshot 12" loading="lazy"><div class="caption"><div class="title">Inside Shop</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (13).png" alt="Screenshot 13" loading="lazy"><div class="caption"><div class="title">Player and NPC interaction</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (14).png" alt="Screenshot 14" loading="lazy"><div class="caption"><div class="title">Hurt Compaion</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (15).png" alt="Screenshot 15" loading="lazy"><div class="caption"><div class="title">Hurt NPC</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (16).png" alt="Screenshot 16" loading="lazy"><div class="caption"><div class="title">Battle</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (17).png" alt="Screenshot 17" loading="lazy"><div class="caption"><div class="title">Shop NPC</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (18).png" alt="Screenshot 18" loading="lazy"><div class="caption"><div class="title">Battle</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (19).png" alt="Screenshot 19" loading="lazy"><div class="caption"><div class="title">Boss</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (20).png" alt="Screenshot 20" loading="lazy"><div class="caption"><div class="title">Treasure</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (21).png" alt="Screenshot 21" loading="lazy"><div class="caption"><div class="title">HUD Elements</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (22).png" alt="Screenshot 22" loading="lazy"><div class="caption"><div class="title">Shop Menu</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (23).png" alt="Screenshot 23" loading="lazy"><div class="caption"><div class="title">Credits / End</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot (24).png" alt="Screenshot 24" loading="lazy"><div class="caption"><div class="title">Boss</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot 2025-05-06 081644.png" alt="Screenshot A" loading="lazy"><div class="caption"><div class="title">Portrait Close-up</div><div></div></div></div>
+      <div class="card"><img class="thumb" src="images/Screenshot 2025-05-06 025413.png" alt="Screenshot B" loading="lazy"><div class="caption"><div class="title">Title Screen</div><div></div></div></div>
+    </section>
+
+    <footer>
+      <div style="color:var(--muted)">Contact: kortniprouty@gmail.com</div>
+      <div><a class="cta" href="#gallery">View Gallery</a></div>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <button class="close" aria-label="close" onclick="closeModal()">✕</button>
+    <img id="modal-img" src="" alt="Expanded screenshot">
+  </div>
+
+  <script>
+    // Simple modal viewer for gallery images
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    document.querySelectorAll('.thumb').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        modalImg.src = img.src;
+      })
+    })
+    function closeModal(){modal.classList.remove('active');modal.setAttribute('aria-hidden','true');modalImg.src='';}
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+  </script>
+</body>
+</html>
